@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Price Prediction Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+        font-size: 20px; /* Adjust the font size as needed */
+      }
+  
+      .stock-box {
+        display: inline-block;
+        border: 1px solid #ccc;
+        padding: 10px; /* Increase padding for a bigger box */
+        margin: 10px; /* Increase margin for more spacing */
+        border-radius: 10px; /* Adjust border-radius for a larger rounded corner */
+      }
+  
+      /* Add more styles as needed */
+    </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="nav-logo">
+      <div class="logout-text">
+        <div class="admin-nav-logo">
+      <img src="logo.png" alt="Logo"> 
+    
+    <a class="nav-link" href="home.html">Home</a>
+    <a class="nav-link" href="INDEX.html">Dashboard</a>
+    <a class="nav-link" href="data.html">Data</a>
+    
+      <span>Logout</span>
+      
+      <img src="user-1.jpg" alt="ALogo"> 
+    </div>
+    </div>
+  </div>
+  </div>
+  <div class="container">
+    <h1>Stock Price Prediction Dashboard</h1>
+    <div class="input-container">
+      <label for="stockSymbol">Stock Symbol:</label>
+      <select id="symbolDropdown">
+        <option value="AAPL">AAPL</option>
+        <option value="GOOGL">GOOGL</option>
+        <option value="MSFT">MSFT</option>
+        <option value="AMZN">AMZN</option>
+        <option value="TSLA">TSLA</option>
+        <option value="FB">FB</option>
+        <option value="NVDA">NVDA</option>
+        <option value="NFLX">NFLX</option>
+        <option value="PYPL">PYPL</option>
+        <option value="INTC">INTC</option>
+        <option value="IBM">IBM</option>
+        <option value="CSCO">CSCO</option>
+        <option value="AMD">AMD</option>
+        <option value="GS">GS</option>
+        <option value="JPM">JPM</option>
+        <option value="BA">BA</option>
+        <option value="DIS">DIS</option>
+        <option value="V">V</option>
+        <option value="WMT">WMT</option>
+        <option value="COST">COST</option>
+      </select>
+      <button id="fetchButton">Fetch Data</button>
+    </div>
+    <div>
+      <p>Stock Symbols:</p>
+      <div class="stock-box">AAPL</div>
+      <div class="stock-box">GOOGL</div>
+      <div class="stock-box">MSFT</div>
+      <div class="stock-box">AMZN</div>
+      <div class="stock-box">TSLA</div>
+      <div class="stock-box">FB</div>
+      <div class="stock-box">NVDA</div>
+      <div class="stock-box">NFLX</div>
+      <div class="stock-box">PYPL</div>
+      <div class="stock-box">INTC</div>
+      <div class="stock-box">IBM</div>
+      <div class="stock-box">CSCO</div>
+      <div class="stock-box">AMD</div>
+      <div class="stock-box">GS</div>
+      <div class="stock-box">JPM</div>
+      <div class="stock-box">BA</div>
+      <div class="stock-box">DIS</div>
+      <div class="stock-box">V</div>
+      <div class="stock-box">WMT</div>
+      <div class="stock-box">COST</div>
+    </div>
+    <div class="chart-container">
+      <canvas id="stockChart"></canvas>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!--!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Price Prediction Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a class="nav-link" href="#">Home</a>
+    <a class="nav-link" href="#">Dashboard</a>
+    <a class="nav-link" href="#">Data</a>
+  </div>
+  <div class="container">
+    <h1>Stock Price Prediction Dashboard</h1>
+    <div class="input-container">
+      <label for="stockSymbol">Stock Symbol:</label>
+      <select id="symbolDropdown">
+        <option value="AAPL">AAPL</option>
+        <option value="GOOGL">GOOGL</option>
+        <option value="MSFT">MSFT</option>
+        <option value="AMZN">AMZN</option>
+        <option value="TSLA">TSLA</option>
+        <option value="FB">FB</option>
+        <option value="NVDA">NVDA</option>
+        <option value="NFLX">NFLX</option>
+        <option value="PYPL">PYPL</option>
+        <option value="INTC">INTC</option>
+        <option value="IBM">IBM</option>
+        <option value="CSCO">CSCO</option>
+        <option value="AMD">AMD</option>
+        <option value="GS">GS</option>
+        <option value="JPM">JPM</option>
+        <option value="BA">BA</option>
+        <option value="DIS">DIS</option>
+        <option value="V">V</option>
+        <option value="WMT">WMT</option>
+        <option value="COST">COST</option>
+      </select>
+      <button id="fetchButton">Fetch Data</button>
+    </div>
+    <div>
+      <p>Stock Symbols:</p>
+      <p>'AAPL', 'GOOGL', 'MSFT', 'AMZN', 'TSLA', 'FB', 'NVDA', 'NFLX', 'PYPL', 'INTC',
+      'IBM', 'CSCO', 'AMD', 'GS', 'JPM', 'BA', 'DIS', 'V', 'WMT', 'COST'</p>
+      'AAPL', 'GOOGL', 'MSFT', 'AMZN', 'TSLA', 'FB', 'NVDA', 'NFLX', 'PYPL', 'INTC',
+'IBM', 'CSCO', 'AMD', 'GS', 'JPM', 'BA', 'DIS', 'V', 'WMT', 'COST',
+
+
+'GE', 'MCD', 'XOM', 'PFE', 'CVX', 'SPY', 'QCOM', 'MMM', 'CAT', 'PEP',
+'KO', 'IBM', 'ORCL', 'NKE', 'MS', 'BAC', 'GM', 'F', 'VZ', 'WFC', 'MRK'.
+    </div>
+    <div class="chart-container">
+      <canvas id="stockChart"></canvas>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
